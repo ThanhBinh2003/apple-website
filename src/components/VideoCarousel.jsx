@@ -114,7 +114,7 @@ const VideoCarousel = () => {
         gsap.ticker.remove(animUpdate);
       }
     }
-  }, [videoId, startPlay]);
+  }, [videoId, startPlay, isPlaying]);
 
   const handleProcess = (type, i) => {
     switch (type) {
@@ -174,7 +174,7 @@ const VideoCarousel = () => {
               </div>
 
               <div className="left-[5%} absolute top-12 z-10">
-                {list.textLists.map((text, i) => (
+                {list.textLists.map((text) => (
                   <p
                     key={text}
                     className="ml-8 text-xl font-medium md:text-2xl"
